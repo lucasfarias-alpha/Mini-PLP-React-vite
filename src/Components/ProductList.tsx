@@ -52,7 +52,7 @@ const ProductList: React.FC = () => {
                         className="bg-gray-200 flex justify-center items-center rounded-[50%] w-[26px] h-[26px] bg-transparent border border-white group hover:bg-rose-50"
                         onClick={() => decrementQuantity(product)}
                       >
-                        <img className="bg-transparent group-hover:invert group-hover:brightness-100" src="/assets/images/icon-decrement-quantity.svg" alt="Botão de diminuir itens no carrinho" aria-label="Botão de diminuir itens no carrinho" />
+                        <img className="bg-transparent group-hover:invert group-hover:brightness-100" src="./assets/images/icon-decrement-quantity.svg" alt="Botão de diminuir itens no carrinho" aria-label="Botão de diminuir itens no carrinho" />
                       </button>
                       {/* Exibe a quantidade do produto no carrinho */}
                       <span className="text-white text-sm">{cart.find(item => item.product.name === product.name)?.quantity || 0}</span>
@@ -61,7 +61,7 @@ const ProductList: React.FC = () => {
                         className="bg-gray-200 flex justify-center items-center rounded-[50%] w-[26px] h-[26px] bg-transparent border border-white group hover:bg-rose-50"
                         onClick={() => incrementQuantity(product)}
                       >
-                        <img className="bg-transparent group-hover:invert group-hover:brightness-100" src="/assets/images/icon-increment-quantity.svg" alt="Botão de adicionar mais itens no carrinho" aria-label="Botão de adicionar mais itens no carrinho" />
+                        <img className="bg-transparent group-hover:invert group-hover:brightness-100" src="./assets/images/icon-increment-quantity.svg" alt="Botão de adicionar mais itens no carrinho" aria-label="Botão de adicionar mais itens no carrinho" />
                       </button>
                     </div>
                   ) : (
@@ -69,7 +69,7 @@ const ProductList: React.FC = () => {
                       className="flex items-center justify-center gap-2 max-w-44 w-full h-10 bg-white py-2 px-4 rounded-3xl border border-rose-500 text-rose-900 text-base font-semibold"
                       onClick={() => addToCart(product)}
                     >
-                      <img src="/assets/images/icon-add-to-cart.svg" alt="Botão de adicionar ao carrinho" aria-label="Botão de adicionar ao carrinho" />
+                      <img src="./assets/images/icon-add-to-cart.svg" alt="Botão de adicionar ao carrinho" aria-label="Botão de adicionar ao carrinho" />
                       Add to Cart
                     </button>
                   )}

@@ -27,7 +27,7 @@ function ShoppingCart() {
 
       {cart.length === 0 ? (
         <div className="flex flex-col justify-center items-center">
-          <img src="/assets/images/illustration-empty-cart.svg" alt="Carrinho vazio"/>
+          <img src="./assets/images/illustration-empty-cart.svg" alt="Carrinho vazio"/>
           <p className="text-rose-500 text-base font-medium">Your added items will appear here</p>
         </div>
       ) : (
@@ -49,7 +49,7 @@ function ShoppingCart() {
                   className=" group bg-red-500 text-white rounded-[50%] border border-rose-300 p-[2px] hover:border-red" 
                   onClick={() => removeFromCart(item.product)}
                 >
-                  <img className="w-2 group-hover:invert group-hover:brightness-100"  src="/assets/images/icon-remove-item.svg" alt="Botão de remover item do carrinho" aria-label='Botão de remover item do carrinho' />
+                  <img className="w-2 group-hover:invert group-hover:brightness-100"  src="./assets/images/icon-remove-item.svg" alt="Botão de remover item do carrinho" aria-label='Botão de remover item do carrinho' />
                 </button>
 
               </div>
@@ -63,7 +63,7 @@ function ShoppingCart() {
           </div>
 
           <div className="bg-rose-50 my-5 rounded-xl flex gap-2 h-12 justify-center items-center">
-            <img src="/assets/images/icon-carbon-neutral.svg" alt="Arvore" />
+            <img src="./assets/images/icon-carbon-neutral.svg" alt="Arvore" />
             <span className="font-normal text-base">This is a <span className="text-rose-900 font-bold text-base">carbon-neutral</span> delivery</span>
           </div>  
           {/* Botão Confirmar Pedido */}
@@ -79,7 +79,7 @@ function ShoppingCart() {
             <div className="modal fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
               <div className="bg-white p-8 rounded-lg shadow-lg max-w-[520px] w-full">
                 
-                <img  src="/assets/images/icon-order-confirmed.svg" alt="Ordem confirmada" />
+                <img  src="./assets/images/icon-order-confirmed.svg" alt="Ordem confirmada" />
                 <div className="flex flex-col gap-3 mb-5">
                   <h2 className="text-3xl font-bold mt-5">Order Confirmed</h2>
                   <span className="text-rose-400 font-normal text-sm">we hope you enjoy your food!</span>
