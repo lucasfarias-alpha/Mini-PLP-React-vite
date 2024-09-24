@@ -19,10 +19,10 @@ const ProductList: React.FC = () => {
   const { cart, addToCart, incrementQuantity, decrementQuantity } = useCart();
 
   useEffect(() => {
-    setProducts(productsData); // Definindo os produtos diretamente
+    setProducts(productsData); 
   }, []);
 
-  // Função para verificar se o produto já está no carrinho
+  
   const isProductInCart = (product: Product) => {
     return cart.some(cartItem => cartItem.product.name === product.name);
   };
@@ -38,25 +38,25 @@ const ProductList: React.FC = () => {
               <div className="relative">
                 <img
                   className={`rounded-xl ${productInCart ? "border-[3px] border-red" : ""} sm:w-full sm:max-h-[220px] md:max-h-full sm:object-cover`}
-                  src={product.image.thumbnail}  // fallback image
+                  src={product.image.thumbnail}  
                   srcSet={`${product.image.mobile} 480w, ${product.image.tablet} 768w, ${product.image.desktop} 1200w`}
                   sizes="(max-width: 480px) 480px, (max-width: 768px) 768px, 1200px"
                   alt={product.name}
                 />
-                {/* Botões abaixo da imagem */}
+               
                 <div className="mt-4 absolute bottom-[-17px] left-[50%] translate-x-[-50%] max-w-44 w-full h-10 rounded-3xl">
                   {productInCart ? (
                     <div className="quantity-controls flex items-center justify-between gap-2 max-w-44 w-full h-10 bg-red px-4 rounded-3xl">
-                      {/* Botão de decrementar */}
+                     
                       <button
                         className="bg-gray-200 flex justify-center items-center rounded-[50%] w-[26px] h-[26px] bg-transparent border border-white group hover:bg-rose-50"
                         onClick={() => decrementQuantity(product)}
                       >
                         <img className="bg-transparent group-hover:invert group-hover:brightness-100" src="./assets/images/icon-decrement-quantity.svg" alt="Botão de diminuir itens no carrinho" aria-label="Botão de diminuir itens no carrinho" />
                       </button>
-                      {/* Exibe a quantidade do produto no carrinho */}
+                      
                       <span className="text-white text-sm">{cart.find(item => item.product.name === product.name)?.quantity || 0}</span>
-                      {/* Botão de incrementar */}
+                     
                       <button
                         className="bg-gray-200 flex justify-center items-center rounded-[50%] w-[26px] h-[26px] bg-transparent border border-white group hover:bg-rose-50"
                         onClick={() => incrementQuantity(product)}

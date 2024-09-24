@@ -5,17 +5,17 @@ function ShoppingCart() {
   const { cart, removeFromCart, clearCart } = useCart();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Calcula o total do carrinho
+
   const totalPrice = cart.reduce((total, item) => {
     return total + item.product.price * item.quantity;
   }, 0);
 
-  // Função para abrir o modal
+  
   const handleConfirmOrder = () => {
     setIsModalOpen(true);
   };
 
-  // Função para iniciar um novo pedido (limpa o carrinho e fecha o modal)
+
   const handleStartNewOrder = () => {
     clearCart();
     setIsModalOpen(false);
@@ -56,7 +56,7 @@ function ShoppingCart() {
             ))}
           </div>
 
-          {/* Total do pedido */}
+
           <div className="total-price flex justify-between mt-8">
             <span className="text-rose-900 text-base font-normal">Order Total</span>
             <h3 className="text-2xl font-bold">${totalPrice.toFixed(2)}</h3>
@@ -66,7 +66,7 @@ function ShoppingCart() {
             <img src="./assets/images/icon-carbon-neutral.svg" alt="Arvore" />
             <span className="font-normal text-base">This is a <span className="text-rose-900 font-bold text-base">carbon-neutral</span> delivery</span>
           </div>  
-          {/* Botão Confirmar Pedido */}
+          
           <button
             className="bg-green-500 py-2 px-4 bg-red rounded-3xl w-full h-12 text-rose-50 text-base font-bold hover:opacity-90"
             onClick={handleConfirmOrder}
@@ -74,7 +74,7 @@ function ShoppingCart() {
             Confirm Order
           </button>
 
-          {/* Modal para confirmar pedido */}
+         
           {isModalOpen && (
             <div className="modal fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
               <div className="bg-white p-8 rounded-lg shadow-lg max-w-[520px] w-full">
@@ -113,7 +113,7 @@ function ShoppingCart() {
                       </div>
                     ))}
                   </div>
-                  {/* Total do pedido */}
+                 
                   <div className="order-total mt-4 flex justify-between">
                     <span className="text-sm font-normal">Order Total</span>
                     <h3 className="text-2xl font-bold ">${totalPrice.toFixed(2)}</h3>
@@ -121,7 +121,7 @@ function ShoppingCart() {
                 </div>
 
 
-                {/* Botão para iniciar um novo pedido */}
+               
                 <button
                   className="mt-4 text-white py-2 px-4 rounded-3xl bg-red w-full h-12"
                   onClick={handleStartNewOrder}

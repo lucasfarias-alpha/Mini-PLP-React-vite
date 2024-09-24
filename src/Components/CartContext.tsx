@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-// Definição dos tipos
+
 interface Product {
   name: string;
   category: string;
@@ -31,10 +31,10 @@ interface CartProviderProps {
   children: ReactNode;
 }
 
-// Criando o contexto do carrinho
+
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
-// Hook personalizado para usar o contexto
+
 export const useCart = (): CartContextType => {
   const context = useContext(CartContext);
   if (!context) {
@@ -43,11 +43,11 @@ export const useCart = (): CartContextType => {
   return context;
 };
 
-// Componente Provider para o carrinho
+
 export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
   const [cart, setCart] = useState<CartItem[]>([]);
 
-  // Adicionar produto ao carrinho
+  
   const addToCart = (product: Product) => {
     setCart((prevCart) => {
       const itemIndex = prevCart.findIndex((item) => item.product.name === product.name);
@@ -61,12 +61,12 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
     });
   };
 
-  // Remover produto do carrinho
+  
   const removeFromCart = (product: Product) => {
     setCart((prevCart) => prevCart.filter((item) => item.product.name !== product.name));
   };
 
-  // Incrementar quantidade
+ 
   const incrementQuantity = (product: Product) => {
     setCart((prevCart) =>
       prevCart.map((item) =>
@@ -77,7 +77,7 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
     );
   };
 
-  // Decrementar quantidade
+  
   const decrementQuantity = (product: Product) => {
     setCart((prevCart) =>
       prevCart
@@ -86,11 +86,11 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
             ? { ...item, quantity: item.quantity - 1 }
             : item
         )
-        .filter((item) => item.quantity > 0) // Remove item se a quantidade for 0
+        .filter((item) => item.quantity > 0) 
     );
   };
 
-  // Limpar todo o carrinho
+  
   const clearCart = () => {
     setCart([]);
   };
