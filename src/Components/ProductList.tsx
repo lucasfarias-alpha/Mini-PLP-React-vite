@@ -29,12 +29,12 @@ const ProductList: React.FC = () => {
 
   return (
     <div className="lg:flex lg:gap-6">
-      <div className="product-list sm:flex md:grid md:grid-cols-2 lg:flex lg:flex-row flex-wrap gap-5">
+      <div className="product-list sm:flex md:grid md:grid-cols-2 lg:flex lg:flex-row flex-wrap gap-5 ">
         {products.map((product, index) => {
           const productInCart = isProductInCart(product);
 
           return (
-            <div key={index} className="sm:w-full lg:max-w-[270px]">
+            <div key={index} className="sm:w-full lg:max-w-[270px] transition-transform duration-300 ease-linear hover:translate-y-[-10px]">
               <div className="relative">
                 <img
                   className={`rounded-xl ${productInCart ? "border-[3px] border-red" : ""} sm:w-full sm:max-h-[220px] md:max-h-full sm:object-cover`}
