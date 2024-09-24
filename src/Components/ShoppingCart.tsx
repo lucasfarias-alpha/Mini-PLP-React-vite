@@ -22,7 +22,7 @@ function ShoppingCart() {
   };
 
   return (
-    <div className="lg:max-w-[420px] w-full h-fit bg-white rounded-xl p-4 pb-8">
+    <div className="lg:max-w-[380px] w-full h-fit bg-white rounded-xl p-4 pb-8">
       <h2 className="text-red text-3xl font-bold">Your Cart ({cart.length})</h2>
 
       {cart.length === 0 ? (

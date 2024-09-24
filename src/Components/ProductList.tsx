@@ -34,7 +34,7 @@ const ProductList: React.FC = () => {
           const productInCart = isProductInCart(product);
 
           return (
-            <div key={index} className="sm:w-full lg:max-w-[270px] transition-transform duration-300 ease-linear hover:translate-y-[-10px]">
+            <div key={index} className="sm:w-full lg:max-w-[245px] transition-transform duration-300 ease-linear hover:translate-y-[-10px]">
               <div className="relative">
                 <img
                   className={`rounded-xl ${productInCart ? "border-[3px] border-red" : ""} sm:w-full sm:max-h-[220px] md:max-h-full sm:object-cover`}
@@ -66,7 +66,7 @@ const ProductList: React.FC = () => {
                     </div>
                   ) : (
                     <button
-                      className="flex items-center justify-center gap-2 max-w-44 w-full h-10 bg-white py-2 px-4 rounded-3xl border border-rose-500 text-rose-900 text-base font-semibold"
+                      className="flex items-center justify-center gap-2 max-w-44 w-full h-10 bg-white py-2 px-4 rounded-3xl border border-rose-500 text-rose-900 text-base font-semibold hover:text-red"
                       onClick={() => addToCart(product)}
                     >
                       <img src="./assets/images/icon-add-to-cart.svg" alt="Botão de adicionar ao carrinho" aria-label="Botão de adicionar ao carrinho" />
