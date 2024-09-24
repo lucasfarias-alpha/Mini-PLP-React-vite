@@ -77,8 +77,8 @@ const ProductList: React.FC = () => {
               </div>
               <div className="product-details mt-8">
                 <h2 className="text-rose-400 text-base font-normal">{product.category}</h2>
-                <p className="text-rose-900 text-base font-semibold">{product.name}</p>
-                <p className="text-red text-lg font-bold">${product.price.toFixed(2)}</p>
+                <p className="text-rose-900 text-base font-bold">{product.name}</p>
+                <p className="text-red text-base font-bold">${product.price.toFixed(2)}</p>
               </div>
             </div>
           );

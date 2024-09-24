@@ -82,11 +82,11 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
     setCart((prevCart) =>
       prevCart
         .map((item) =>
-          item.product.name === product.name && item.quantity > 1
+          item.product.name === product.name
             ? { ...item, quantity: item.quantity - 1 }
             : item
         )
-        .filter((item) => item.quantity > 0) 
+        .filter((item) => item.quantity > 0) // Remove o produto se a quantidade for 0
     );
   };
 

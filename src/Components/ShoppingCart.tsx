@@ -36,10 +36,10 @@ function ShoppingCart() {
             {cart.map((item, index) => (
               <div key={index} className="cart-item flex items-center justify-between py-6 border-b border-b-rose-100">
                 <div className="product-info flex-1 flex flex-col gap-2">
-                  <h3 className="font-medium text-sm">{item.product.name}</h3>
+                  <h3 className="font-bold text-sm">{item.product.name}</h3>
                   <div className="flex items-center gap-2">
-                    <p className="text-red text-sm font-medium">{item.quantity}x</p>
-                    <p className="text-rose-400 text-base font-normal "> @${item.product.price.toFixed(2)}</p>
+                    <p className="text-red text-base font-bold">{item.quantity}x</p>
+                    <p className="text-rose-400 text-base font-medium "> @${item.product.price.toFixed(2)}</p>
                     <p className="text-rose-500 text-base font-semibold">
                       ${(item.product.price * item.quantity).toFixed(2)}
                     </p>
@@ -68,7 +68,7 @@ function ShoppingCart() {
           </div>  
           
           <button
-            className="bg-green-500 py-2 px-4 bg-red rounded-3xl w-full h-12 text-rose-50 text-base font-bold hover:opacity-90"
+            className="bg-green-500 py-2 px-4 bg-red rounded-3xl w-full h-12 text-rose-50 text-base font-bold hover:opacity-90 outline"
             onClick={handleConfirmOrder}
           >
             Confirm Order
@@ -99,12 +99,12 @@ function ShoppingCart() {
                           )}
                           
                           <div className="flex flex-col flex-1 pl-3">
-                            <p className="text-rose-900 text-base font-medium">
+                            <p className="text-rose-900 text-base font-bold">
                               {item.product.name}
                             </p>
                             <div className="flex gap-3">
-                              <p className="font-medium text-red">x{item.quantity}</p>
-                              <p className="text-rose-400">@ ${item.product.price.toFixed(2)}</p>
+                              <p className="font-bold text-red ">{item.quantity}x</p>
+                              <p className="text-rose-400 text-base font-normal">@ ${item.product.price.toFixed(2)}</p>
                             </div>
                           </div>
                           <p className="text-rose-900 font-semibold text-base">${(item.product.price * item.quantity).toFixed(2)}</p>
@@ -114,8 +114,8 @@ function ShoppingCart() {
                     ))}
                   </div>
                  
-                  <div className="order-total mt-4 flex justify-between">
-                    <span className="text-sm font-normal">Order Total</span>
+                  <div className="order-total mt-4 flex justify-between items-center">
+                    <span className="text-base font-normal">Order Total</span>
                     <h3 className="text-2xl font-bold ">${totalPrice.toFixed(2)}</h3>
                   </div>
                 </div>

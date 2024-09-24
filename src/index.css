@@ -1,49 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-    font-family: 'RedHatText';
-    src: url('../public/assets/fonts/static/RedHatText-Bold.ttf') format('truetype'),
-         url('../public//assets/fonts/static/RedHatText-Bold.ttf') format('truetype'),
-         url('../public//assets/fonts/static/RedHatText-SemiBold.ttf') format('truetype');
-
-  }
-  
-  @font-face {
-    font-family: 'RedHatText';
-    src: url('../public//assets/fonts/RedHatText-Italic-VariableFont_wght.ttf') format('truetype'),
-         url('../public//assets/fonts/RedHatText-VariableFont_wght.ttf') format('truetype');
-  
-    font-style: italic; 
-  }
-  
+body {
+  font-family: "RedHatText", sans-serif;
+}
 
 .overflow-y-auto {
-  overflow-y: auto; 
-  padding-right: 10px; 
-  scrollbar-width: thin; 
+  overflow-y: auto;
+  padding-right: 10px;
+  scrollbar-width: thin;
   scrollbar-color: #c4c4c4 #f1f1f1;
 }
-  
+
 .overflow-y-auto::-webkit-scrollbar {
-  width: 8px; 
+  width: 8px;
 }
 
 .overflow-y-auto::-webkit-scrollbar-track {
-  background: #f1f1f1; 
+  background: #f1f1f1;
 }
 
 .overflow-y-auto::-webkit-scrollbar-thumb {
-  background-color: #c4c4c4; 
-  border-radius: 4px; 
-  border: 2px solid #f1f1f1; 
+  background-color: #c4c4c4;
+  border-radius: 4px;
+  border: 2px solid #f1f1f1;
 }
 
-
-.overflow-y-auto {
-  scrollbar-width: thin; 
-  scrollbar-color: #c4c4c4 #f1f1f1;
+.outline{
+  outline: none !important;;
 }
-
-  
