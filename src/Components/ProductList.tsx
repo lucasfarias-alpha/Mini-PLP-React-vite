@@ -66,7 +66,7 @@ const ProductList: React.FC = () => {
                     </div>
                   ) : (
                     <button
-                      className="flex items-center justify-center gap-2 max-w-44 w-full h-10 bg-white py-2 px-4 rounded-3xl border border-rose-500 text-rose-900 text-base font-semibold hover:text-red"
+                      className="flex items-center justify-center gap-2 max-w-44 w-full h-10 bg-white py-2 px-4 rounded-3xl border border-rose-500 text-rose-900 text-base font-semibold hover:text-red hover:border-red"
                       onClick={() => addToCart(product)}
                     >
                       <img src="./assets/images/icon-add-to-cart.svg" alt="Botão de adicionar ao carrinho" aria-label="Botão de adicionar ao carrinho" />
