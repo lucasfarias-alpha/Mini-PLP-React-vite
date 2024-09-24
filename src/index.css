@@ -6,7 +6,7 @@
 @tailwind utilities;
 
 body {
-  font-family: "RedHatText", sans-serif;
+  font-family: 'Red Hat Text', sans-serif;
 }
 
 .overflow-y-auto {
