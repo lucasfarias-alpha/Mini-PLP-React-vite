@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useCart } from './CartContext.tsx'; 
+import { useCart } from '../Contexts/CartContext.tsx'; 
 
 function ShoppingCart() {
   const { cart, removeFromCart, clearCart } = useCart();

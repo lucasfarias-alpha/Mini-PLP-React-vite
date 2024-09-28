@@ -1,4 +1,4 @@
-import { CartProvider } from './Components/CartContext.tsx';
+import { CartProvider } from './Contexts/CartContext.tsx';
 import ProductList from './Components/ProductList.tsx';
 import ShoppingCart from './Components/ShoppingCart.tsx';
 

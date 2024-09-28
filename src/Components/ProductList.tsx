@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useCart } from './CartContext.tsx';
-import productsData from '../data/Api.json'; // Importando o JSON
+import { useCart } from '../Contexts/CartContext.tsx';
+import productsData from '../data/products.json'; 
 
 interface Product {
   image: {
